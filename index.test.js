@@ -46,37 +46,37 @@ import * as fn from "./index.js";
 //   });
 // });
 
-describe("replaceItem", function () {
-  it("should not mutate the original array", function () {
-    const array = ["bread", "cheese", "ham", "bread"];
-    const actual = fn.replaceItem(array, "chicken", 2);
-    expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
-    expect(actual).not.toBe(array);
-  });
-  it("should replace item", function () {
-    const expected = ["bread", "cheese", "chicken", "bread"];
-    const actual = fn.replaceItem(
-      ["bread", "cheese", "ham", "bread"],
-      "chicken",
-      2
-    );
-    expect(actual).toEqual(expected);
-  });
-});
-
-// describe("removeItem", function () {
+// describe("replaceItem", function () {
 //   it("should not mutate the original array", function () {
 //     const array = ["bread", "cheese", "ham", "bread"];
-//     const actual = fn.removeItem(array, 1);
+//     const actual = fn.replaceItem(array, "chicken", 2);
 //     expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
 //     expect(actual).not.toBe(array);
 //   });
-//   it("should remove item", function () {
-//     const expected = ["bread", "ham", "bread"];
-//     const actual = fn.removeItem(["bread", "cheese", "ham", "bread"], 1);
+//   it("should replace item", function () {
+//     const expected = ["bread", "cheese", "chicken", "bread"];
+//     const actual = fn.replaceItem(
+//       ["bread", "cheese", "ham", "bread"],
+//       "chicken",
+//       2
+//     );
 //     expect(actual).toEqual(expected);
 //   });
 // });
+
+describe("removeItem", function () {
+  it("should not mutate the original array", function () {
+    const array = ["bread", "cheese", "ham", "bread"];
+    const actual = fn.removeItem(array, 1);
+    expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
+    expect(actual).not.toBe(array);
+  });
+  it("should remove item", function () {
+    const expected = ["bread", "ham", "bread"];
+    const actual = fn.removeItem(["bread", "cheese", "ham", "bread"], 1);
+    expect(actual).toEqual(expected);
+  });
+});
 // describe("updateName", function () {
 //   it("should not mutate the original object", function () {
 //     const user = { name: "Lambert", age: 99, height: "6ft" };
