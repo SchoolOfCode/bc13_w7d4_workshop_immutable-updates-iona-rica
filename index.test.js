@@ -14,19 +14,19 @@ import * as fn from "./index.js";
 //   });
 // });
 
-describe("addToBeginning", function () {
-  it("should not mutate the original array", function () {
-    const array = ["meanie", "meinie", "moe"];
-    const actual = fn.addToBeginning(array, "einie");
-    expect(array).toEqual(["meanie", "meinie", "moe"]);
-    expect(actual).not.toBe(array);
-  });
-  it("should add item to the beginning", function () {
-    const expected = ["einie", "meanie", "meinie", "moe"];
-    const actual = fn.addToBeginning(["meanie", "meinie", "moe"], "einie");
-    expect(actual).toEqual(expected);
-  });
-});
+// describe("addToBeginning", function () {
+//   it("should not mutate the original array", function () {
+//     const array = ["meanie", "meinie", "moe"];
+//     const actual = fn.addToBeginning(array, "einie");
+//     expect(array).toEqual(["meanie", "meinie", "moe"]);
+//     expect(actual).not.toBe(array);
+//   });
+//   it("should add item to the beginning", function () {
+//     const expected = ["einie", "meanie", "meinie", "moe"];
+//     const actual = fn.addToBeginning(["meanie", "meinie", "moe"], "einie");
+//     expect(actual).toEqual(expected);
+//   });
+// });
 
 // describe("insertItem", function () {
 //   it("should not mutate the original array", function () {
@@ -46,23 +46,23 @@ describe("addToBeginning", function () {
 //   });
 // });
 
-// describe("replaceItem", function () {
-//   it("should not mutate the original array", function () {
-//     const array = ["bread", "cheese", "ham", "bread"];
-//     const actual = fn.replaceItem(array, "chicken", 2);
-//     expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
-//     expect(actual).not.toBe(array);
-//   });
-//   it("should replace item", function () {
-//     const expected = ["bread", "cheese", "chicken", "bread"];
-//     const actual = fn.replaceItem(
-//       ["bread", "cheese", "ham", "bread"],
-//       "chicken",
-//       2
-//     );
-//     expect(actual).toEqual(expected);
-//   });
-// });
+describe("replaceItem", function () {
+  it("should not mutate the original array", function () {
+    const array = ["bread", "cheese", "ham", "bread"];
+    const actual = fn.replaceItem(array, "chicken", 2);
+    expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
+    expect(actual).not.toBe(array);
+  });
+  it("should replace item", function () {
+    const expected = ["bread", "cheese", "chicken", "bread"];
+    const actual = fn.replaceItem(
+      ["bread", "cheese", "ham", "bread"],
+      "chicken",
+      2
+    );
+    expect(actual).toEqual(expected);
+  });
+});
 
 // describe("removeItem", function () {
 //   it("should not mutate the original array", function () {
