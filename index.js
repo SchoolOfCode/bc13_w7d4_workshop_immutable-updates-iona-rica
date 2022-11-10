@@ -35,12 +35,15 @@ newArr.splice(index, 1)
 
 // //Objects:
 
-// // Immutably update the object so that the value under the "name" property becomes the new name
-// // For example calling:
-// //     updateName({ name: "Abe" }, "Barbara")
-// // should give back:
-// //     { name: "Barbara"}
-// export function updateName(object, newName) {}
+// Immutably update the object so that the value under the "name" property becomes the new name
+// For example calling:
+//     updateName({ name: "Abe" }, "Barbara")
+// should give back:
+//     { name: "Barbara"}
+export function updateName(object, newName) {
+    const newObject = {...object, name: newName}
+    return newObject
+}
 
 // // Immutably update the object so that the value under the "needsACupOfTea" property becomes the opposite of what it was.
 // // Any other properties in the object should be maintained.
