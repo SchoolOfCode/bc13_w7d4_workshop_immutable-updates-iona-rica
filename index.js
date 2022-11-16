@@ -2,35 +2,35 @@
 
 // Immutably add an item to the end of an array
 export function addToEnd(array, item) {
-    const newArr = [...array, item]
-    return newArr
+  const newArr = [...array, item];
+  return newArr;
 }
 
 //Immutably add an item to the beginning of an array
 export function addToBeginning(array, item) {
-    const newArr = [item, ...array]
-    return newArr
+  const newArr = [item, ...array];
+  return newArr;
 }
 
 // Immutably insert an item at a specific position/index within an array
 export function insertItem(array, item, index) {
-    const newArr = [...array.slice(0, index), item, ...array.slice(index)]
-    return newArr
+  const newArr = [...array.slice(0, index), item, ...array.slice(index)];
+  return newArr;
 }
 
 // Immutably replace an item at a specific position/index within an array
 export function replaceItem(array, item, index) {
-    const newArr = [...array.slice(0, index), item, ...array.slice((index+1))]
-    return newArr
+  const newArr = [...array.slice(0, index), item, ...array.slice(index + 1)];
+  return newArr;
 }
 
 // Immutably remove an item at a specific position/index within an array
 export function removeItem(array, index) {
-   // const newArr = [...array.slice(0, index), ...array.slice((index+1))]
-   const newArr = [...array]
-// const newArr = [...array.splice(index, 1)]
-newArr.splice(index, 1)
-    return newArr
+  // const newArr = [...array.slice(0, index), ...array.slice((index+1))]
+  const newArr = [...array];
+  // const newArr = [...array.splice(index, 1)]
+  newArr.splice(index, 1);
+  return newArr;
 }
 
 // //Objects:
@@ -41,8 +41,8 @@ newArr.splice(index, 1)
 // should give back:
 //     { name: "Barbara"}
 export function updateName(object, newName) {
-    const newObj = {...object, name: newName}
-    return newObj
+  const newObj = { ...object, name: newName };
+  return newObj;
 }
 
 // // Immutably update the object so that the value under the "needsACupOfTea" property becomes the opposite of what it was.
