@@ -64,6 +64,7 @@ describe("replaceItem", function () {
   });
 });
 
+
 describe("removeItem", function () {
   it("should not mutate the original array", function () {
     const array = ["bread", "cheese", "ham", "bread"];
@@ -77,6 +78,37 @@ describe("removeItem", function () {
     expect(actual).toEqual(expected);
   });
 });
+describe("updateName", function () {
+  it("should not mutate the original object", function () {
+    const user = { name: "Lambert", age: 99, height: "6ft" };
+    const actual = fn.updateName(user, "Lammy");
+    expect(user).toEqual({ name: "Lambert", age: 99, height: "6ft" });
+    expect(actual).not.toBe(user);
+  });
+  it("should updateName", function () {
+    const expected = { name: "Lammy", age: 99, height: "6ft" };
+    const actual = fn.updateName(
+      { name: "Lambert", age: 99, height: "6ft" },
+      "Lammy"
+    );
+    expect(actual).toEqual(expected);
+  });
+});
+
+// describe("removeItem", function () {
+//   it("should not mutate the original array", function () {
+//     const array = ["bread", "cheese", "ham", "bread"];
+//     const actual = fn.removeItem(array, 1);
+//     expect(array).toEqual(["bread", "cheese", "ham", "bread"]);
+//     expect(actual).not.toBe(array);
+//   });
+//   it("should remove item", function () {
+//     const expected = ["bread", "ham", "bread"];
+//     const actual = fn.removeItem(["bread", "cheese", "ham", "bread"], 1);
+//     expect(actual).toEqual(expected);
+//   });
+// });
+
 describe("updateName", function () {
   it("should not mutate the original object", function () {
     const user = { name: "Lambert", age: 99, height: "6ft" };
