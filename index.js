@@ -68,3 +68,5 @@ export function toggleListItemCompleted(array, index) {
   const newArray = [...array.slice(0,index),{...array[index], completed: !array[index].completed}, ...array.slice(index + 1)]
   return newArray
 }
+
+//finito :)
